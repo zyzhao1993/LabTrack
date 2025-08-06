@@ -31,6 +31,3 @@ app.listen(PORT, () => {
 
 
 
-
-//bTtO76WeKkkWaCri
-//mongodb+srv://zyzhao1993:bTtO76WeKkkWaCri@groceryapp.biekpxn.mongodb.net/?retryWrites=true&w=majority&appName=GroceryApp
