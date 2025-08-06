@@ -1,0 +1,49 @@
+# Node.js
+api/node_modules/
+#api/package-lock.json
+api/.env
+
+client/node_modules/
+
+# Python
+recommend_service/__pycache__/
+recommend_service/*.pyc
+recommend_service/*.pyo
+recommend_service/*.pyd
+recommend_service/.Python
+recommend_service/env/
+recommend_service/venv/
+recommend_service/.venv/
+recommend_service/ENV/
+recommend_service/*.env
+
+# macOS
+.DS_Store
+
+# VSCode/IDE
+.vscode/
+.idea/
+*.swp
+
+# Docker
+**/data/
+**/tmp/
+docker-compose.override.yml
+
+# Logs
+logs/
+*.log
+
+# System
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build output
+dist/
+build/
+coverage/
+*.egg-info/
+
+# Git
+.git/
