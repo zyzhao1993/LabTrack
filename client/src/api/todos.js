@@ -1,7 +1,9 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 export const todosAPI = {
     // get all todos
     getTodos: async (token) => {
-      const response = await fetch('http://localhost:4000/api/todos', {
+      const response = await fetch(`${API_URL}/api/todos`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       return response.json();
@@ -9,7 +11,7 @@ export const todosAPI = {
   
     // create new todo
     createTodo: async (token, { text, order, id }) => {
-      const response = await fetch('http://localhost:4000/api/todos', {
+      const response = await fetch(`${API_URL}/api/todos`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -22,7 +24,7 @@ export const todosAPI = {
   
     // update todo text
     updateTodoText: async (token, id, text) => {
-      const response = await fetch(`http://localhost:4000/api/todos/${id}/text`, {
+      const response = await fetch(`${API_URL}/api/todos/${id}/text`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
@@ -35,7 +37,7 @@ export const todosAPI = {
   
     // update todo checked
     updateTodoChecked: async (token, id, checked, completedAt) => {
-      const response = await fetch(`http://localhost:4000/api/todos/${id}/checked`, {
+      const response = await fetch(`${API_URL}/api/todos/${id}/checked`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
@@ -48,7 +50,7 @@ export const todosAPI = {
   
     // update order
     updateOrder: async (token, updates) => {
-      const response = await fetch('http://localhost:4000/api/todos/order', {
+      const response = await fetch(`${API_URL}/api/todos/order`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
@@ -61,7 +63,7 @@ export const todosAPI = {
   
     // delete todo
     deleteTodo: async (token, id) => {
-      const response = await fetch(`http://localhost:4000/api/todos/${id}`, {
+      const response = await fetch(`${API_URL}/api/todos/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
